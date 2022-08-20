@@ -113,7 +113,7 @@ class LoginApp extends StatelessWidget {
                 obscureText: true,
                 style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF104E5B),fontWeight: FontWeight.normal),
                 decoration: const InputDecoration(
-                  suffixIcon: Icon(Icons.remove_red_eye),
+                  suffixIcon: Icon(Icons.remove_red_eye, color: Colors.grey,),
                   labelText: "Password",
                   labelStyle: TextStyle(color: Color(0xFF616F80)),
                   hintText: "Enter your password",
@@ -145,7 +145,7 @@ class LoginApp extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(const Color(0xFFFDC27A)),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder( borderRadius: BorderRadius.circular(40) ))
                 ),
-                onPressed: (){}, 
+                onPressed: () => Navigator.pushReplacementNamed(context, '/menu_home'), 
                 child: Text(
                   "Login",
                   style: GoogleFonts.poppins(

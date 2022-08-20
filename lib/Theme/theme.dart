@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Screens/login.dart';
+import 'package:food_delivery/Screens/menu_home.dart';
+import 'package:food_delivery/Screens/signup.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login' : (context) => const LoginApp(),
+        '/signup' : (context) => const SignupApp(),
+        '/menu_home' : (context) => const MenuHomeApp(),
       },
     );
   }
