@@ -25,9 +25,8 @@ class LoginApp extends StatelessWidget {
               height: 264,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40)
-                ),
+                    bottomLeft: Radius.circular(40),
+                    bottomRight: Radius.circular(40)),
                 color: Colors.white,
               ),
               child: Column(
@@ -46,18 +45,18 @@ class LoginApp extends StatelessWidget {
                   Text(
                     "Corner Food",
                     style: GoogleFonts.poppins(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: const Color(0xFF104E5B)
-                    ),
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF104E5B)),
                   ),
                   Text(
                     "Delivery App",
                     style: GoogleFonts.poppins(
-                      fontSize: 16, color: const Color(0xFF616F80)
-                    ),
+                        fontSize: 16, color: const Color(0xFF616F80)),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -65,14 +64,15 @@ class LoginApp extends StatelessWidget {
                         width: 131,
                         padding: const EdgeInsets.only(bottom: 12),
                         decoration: const BoxDecoration(
-                          border: Border(bottom: BorderSide(color: Color(0xFFFDC27A), width: 2))
-                        ),
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xFFFDC27A), width: 2))),
                         child: TextButton(
                           onPressed: () {},
                           child: Text(
                             "Login",
                             style: GoogleFonts.poppins(
-                              fontSize: 18, color: const Color(0xFF2B2D33)),
+                                fontSize: 18, color: const Color(0xFF2B2D33)),
                           ),
                         ),
                       ),
@@ -84,7 +84,7 @@ class LoginApp extends StatelessWidget {
                           child: Text(
                             "Signup",
                             style: GoogleFonts.poppins(
-                              fontSize: 18, color: const Color(0xFF2B2D33)),
+                                fontSize: 18, color: const Color(0xFF2B2D33)),
                           ),
                         ),
                       ),
@@ -93,33 +93,44 @@ class LoginApp extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
-              padding: const EdgeInsets.only(left: 30,right: 30,bottom: 20),
+              padding: const EdgeInsets.only(left: 30, right: 30, bottom: 20),
               child: TextField(
-                style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF104E5B),fontWeight: FontWeight.normal),
+                style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    color: const Color(0xFF104E5B),
+                    fontWeight: FontWeight.normal),
                 decoration: const InputDecoration(
-                  labelText: "Email Address",
-                  labelStyle: TextStyle(color: Color(0xFF616F80)),
-                  hintText: "Enter your email",
-                  contentPadding: EdgeInsets.all(5),
-                  focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Color(0xFF104E5B)))
-                ),
+                    labelText: "Email Address",
+                    labelStyle: TextStyle(color: Color(0xFF616F80)),
+                    hintText: "Enter your email",
+                    contentPadding: EdgeInsets.all(5),
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF104E5B)))),
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(left: 30,right: 30,bottom: 20),
+              padding: const EdgeInsets.only(left: 30, right: 30, bottom: 20),
               child: TextField(
                 obscureText: true,
-                style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF104E5B),fontWeight: FontWeight.normal),
+                style: GoogleFonts.poppins(
+                    fontSize: 14,
+                    color: const Color(0xFF104E5B),
+                    fontWeight: FontWeight.normal),
                 decoration: const InputDecoration(
-                  suffixIcon: Icon(Icons.remove_red_eye, color: Colors.grey,),
-                  labelText: "Password",
-                  labelStyle: TextStyle(color: Color(0xFF616F80)),
-                  hintText: "Enter your password",
-                  contentPadding: EdgeInsets.all(5),
-                  focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Color(0xFF104E5B)))
-                ),
+                    suffixIcon: Icon(
+                      Icons.remove_red_eye,
+                      color: Colors.grey,
+                    ),
+                    labelText: "Password",
+                    labelStyle: TextStyle(color: Color(0xFF616F80)),
+                    hintText: "Enter your password",
+                    contentPadding: EdgeInsets.all(5),
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF104E5B)))),
               ),
             ),
             Padding(
@@ -129,30 +140,32 @@ class LoginApp extends StatelessWidget {
                 child: Text(
                   "Forgot Password?",
                   style: GoogleFonts.poppins(
-                    fontSize: 13,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF104E5B)
-                  ),
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF104E5B)),
                 ),
               ),
             ),
-            const SizedBox(height: 100,),
+            const SizedBox(
+              height: 100,
+            ),
             SizedBox(
               width: 248,
               height: 39,
               child: ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(const Color(0xFFFDC27A)),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder( borderRadius: BorderRadius.circular(40) ))
-                ),
-                onPressed: () => Navigator.pushReplacementNamed(context, '/menu_home'), 
+                    backgroundColor:
+                        MaterialStateProperty.all(const Color(0xFFFDC27A)),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40)))),
+                onPressed: () =>
+                    Navigator.pushReplacementNamed(context, '/menu_home'),
                 child: Text(
                   "Login",
                   style: GoogleFonts.poppins(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF2B2D33)
-                  ),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF2B2D33)),
                 ),
               ),
             ),
