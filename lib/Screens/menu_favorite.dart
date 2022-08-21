@@ -136,7 +136,7 @@ class MenuFavoriteApp extends StatelessWidget {
                             width: 126,
                             height: 90,
                           ),
-                          Container(
+                          SizedBox(
                             height: 90,
                             child: Column(
                               children: [
@@ -182,21 +182,34 @@ class MenuFavoriteApp extends StatelessWidget {
                         color: const Color(0xFF104E5B),
                       ),
                     ),
+                    const SizedBox(width: 78,),
                     Container(
                       width: 80,
                       height: 25,
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: const Color(0xFF616F80),width: 2),
                       ),
-                      child: Text(
-                        'See more',
-                        style: GoogleFonts.poppins(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
-                          color: const Color(0xFF104E5B),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          'See more',
+                          style: GoogleFonts.poppins(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF104E5B),
+                          ),
                         ),
                       ),
                     ),
+                  ],
+                ),
+                const SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    FoodOption("assets/image/FriedChicken.png", "Fried Chicken","Spicy fried chicken", 7.50),
+                    FoodOption("assets/image/FriedRice.png", "Fried Rice","Spicy fried rice", 4.50),
                   ],
                 ),
               ],
