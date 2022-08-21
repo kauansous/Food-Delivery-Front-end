@@ -68,6 +68,7 @@ flutter:
    - assets/image/FriedNoodle.png
    - assets/image/FriedRice.png
    - assets/image/Heart.png
+   - assets/image/Ilustração.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

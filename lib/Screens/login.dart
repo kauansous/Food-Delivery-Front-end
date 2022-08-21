@@ -80,7 +80,9 @@ class LoginApp extends StatelessWidget {
                         width: 131,
                         padding: const EdgeInsets.only(bottom: 12),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, '/signup');
+                          },
                           child: Text(
                             "Signup",
                             style: GoogleFonts.poppins(
@@ -107,7 +109,7 @@ class LoginApp extends StatelessWidget {
                     labelText: "Email Address",
                     labelStyle: TextStyle(color: Color(0xFF616F80)),
                     hintText: "Enter your email",
-                    contentPadding: EdgeInsets.all(5),
+                    contentPadding: EdgeInsets.all(0),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Color(0xFF104E5B)))),
               ),
@@ -128,7 +130,7 @@ class LoginApp extends StatelessWidget {
                     labelText: "Password",
                     labelStyle: TextStyle(color: Color(0xFF616F80)),
                     hintText: "Enter your password",
-                    contentPadding: EdgeInsets.all(5),
+                    contentPadding: EdgeInsets.all(0),
                     focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Color(0xFF104E5B)))),
               ),

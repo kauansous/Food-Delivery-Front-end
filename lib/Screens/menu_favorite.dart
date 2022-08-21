@@ -1,22 +1,15 @@
-// ignore_for_file: unused_field, must_be_immutable
-
 import 'package:flutter/material.dart';
-import 'package:food_delivery/Components/food_option.dart';
-import 'package:food_delivery/Components/type_food_option.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../Components/food_option.dart';
+import '../Components/type_food_option.dart';
 
-class MenuHomeApp extends StatefulWidget {
-  const MenuHomeApp({Key? key}) : super(key: key);
+class MenuFavoriteApp extends StatelessWidget {
+  const MenuFavoriteApp({Key? key}) : super(key: key);
 
-  @override
-  State<MenuHomeApp> createState() => _MenuHomeAppState();
-}
-
-class _MenuHomeAppState extends State<MenuHomeApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Material(
+      child: Container(
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
@@ -35,14 +28,14 @@ class _MenuHomeAppState extends State<MenuHomeApp> {
                 Row(
                   children: [
                     Text(
-                      "Let's eat\nQuality food",
+                      "Let's eat\nFavorite food",
                       style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: const Color(0xFF104E5B)),
                     ),
                     const SizedBox(
-                      width: 87,
+                      width: 78,
                     ),
                     ClipOval(
                       child: Image.asset(
@@ -117,73 +110,95 @@ class _MenuHomeAppState extends State<MenuHomeApp> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    TypeFoodOption("Fast food", const Color(0xFFFDC27A)),
-                    TypeFoodOption("Vegetarian", Colors.white),
-                    TypeFoodOption("Drink", Colors.white),
+                    TypeFoodOption("Spicy", const Color(0xFFFDC27A)),
+                    TypeFoodOption("Salty", Colors.white),
+                    TypeFoodOption("Sour", Colors.white),
                   ],
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Stack(
                   children: [
-                    FoodOption("assets/image/GrilledFish.png", "Grilled Fish",
-                        "Spicy grilled fish", 8.50),
-                    FoodOption("assets/image/FriedChicken.png", "Fried Chicken",
-                        "Spicy fried chicken", 7.50),
+                    Container(
+                      width: 289,
+                      height: 122,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFE3C0),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(top: 18, left: 23, bottom: 18),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/image/Ilustração.png",
+                            width: 126,
+                            height: 90,
+                          ),
+                          Container(
+                            height: 90,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Free delivery',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: const Color(0xFF104E5B),
+                                  ),
+                                ),
+                                Text(
+                                  'May 10 - June 21',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color(0xFF616F80),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                TypeFoodOption(
+                                    "Order Now", const Color(0xFFFDC27A)),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(
+                  height: 20,
+                ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    FoodOption("assets/image/FriedNoodle.png", "Fried Noodle",
-                        "Spicy fried noodle", 6.50),
-                    FoodOption("assets/image/FriedRice.png", "Fried Rice",
-                        "Spicy fried rice", 4.50),
+                    Text(
+                      'Your Favorite',
+                      style: GoogleFonts.poppins(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF104E5B),
+                      ),
+                    ),
+                    Container(
+                      width: 80,
+                      height: 25,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: const Color(0xFF616F80),width: 2),
+                      ),
+                      child: Text(
+                        'See more',
+                        style: GoogleFonts.poppins(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF104E5B),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-              ],
-            ),
-          ),
-        ),
-      ),
-      extendBody: true,
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterDocked,
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xFFFDC27A),
-        onPressed: () {},
-        child: const Icon(
-          Icons.shop,
-          color: Color(0xFF104E5B),
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(7),
-        child: BottomAppBar(
-          notchMargin: -8,
-          shape: const CircularNotchedRectangle(),
-          color: Colors.white,
-          child: IconTheme(
-            data: const IconThemeData(color: Colors.grey),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                IconButton(
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/menu_home');
-                    },
-                    icon: const Icon(
-                      Icons.home,
-                      color: Color(0xFFFDC27A),
-                    )),
-                IconButton(onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/menu_favorite');
-                },
-                 icon: const Icon(Icons.book)),
-                const SizedBox(width: 24),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.doorbell)),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.account_box)),
               ],
             ),
           ),
