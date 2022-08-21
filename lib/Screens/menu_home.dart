@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Screens/menu_favorite.dart';
+import 'package:food_delivery/Screens/menu_notification.dart';
+import 'package:food_delivery/Screens/myprofile.dart';
 import 'package:food_delivery/Screens/screen_menu_home.dart';
 
 class MenuHomeApp extends StatefulWidget {
@@ -22,6 +24,8 @@ class _MenuHomeAppState extends State<MenuHomeApp> {
         children: <Widget>[
           const ScreenMenuHome(),
           const MenuFavoriteApp(),
+          const MenuNotification(),
+          const MyProfileApp(),
         ],
       ),
       extendBody: true,
@@ -38,7 +42,7 @@ class _MenuHomeAppState extends State<MenuHomeApp> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(7),
         child: BottomAppBar(
-          notchMargin: -8,
+          notchMargin: -10,
           shape: const CircularNotchedRectangle(),
           color: Colors.white,
           child: IconTheme(
@@ -70,11 +74,11 @@ class _MenuHomeAppState extends State<MenuHomeApp> {
                   });
                 }, icon: const Icon(Icons.doorbell)),
                 IconButton(
-                    onPressed: () {
-                      setState(() {
-                        opcaoselecionada = 3;                     
-                      });
-                    }, icon: const Icon(Icons.account_box)),
+                onPressed: () {
+                  setState(() {
+                    opcaoselecionada = 3;                     
+                  });
+                }, icon: const Icon(Icons.account_box)),
               ],
             ),
           ),

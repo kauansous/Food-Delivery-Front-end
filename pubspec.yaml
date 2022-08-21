@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^3.0.1
+  dotted_line: ^3.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -69,6 +70,12 @@ flutter:
    - assets/image/FriedRice.png
    - assets/image/Heart.png
    - assets/image/Ilustração.png
+   - assets/image/Perfil1.png
+   - assets/image/Perfil2.png
+   - assets/image/Perfil3.png
+   - assets/image/Telefone.png
+   - assets/image/Time.png
+   - assets/image/Gps.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
