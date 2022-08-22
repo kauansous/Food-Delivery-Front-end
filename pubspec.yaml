@@ -76,6 +76,10 @@ flutter:
    - assets/image/Telefone.png
    - assets/image/Time.png
    - assets/image/Gps.png
+   - assets/image/Amazon.png
+   - assets/image/MasterCard.png
+   - assets/image/Paypal.png
+   - assets/image/GooglePay.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
