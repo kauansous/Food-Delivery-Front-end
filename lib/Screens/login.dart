@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/Screens/menu_home.dart';
+import 'package:food_delivery/Screens/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class LoginApp extends StatelessWidget {
   const LoginApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    //double wight = MediaQuery.of(context).size.width;
+    //double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -81,7 +86,16 @@ class LoginApp extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 12),
                         child: TextButton(
                           onPressed: () {
-                            Navigator.pushReplacementNamed(context, '/signup');
+                            Navigator.pushReplacement(
+                              context,
+                              PageTransition(
+                                child: const SignupApp(),
+                                type: PageTransitionType.leftToRightWithFade,
+                                duration: const Duration(milliseconds: 600),
+                                reverseDuration:
+                                    const Duration(milliseconds: 600),
+                              ),
+                            );
                           },
                           child: Text(
                             "Signup",
@@ -160,8 +174,15 @@ class LoginApp extends StatelessWidget {
                         MaterialStateProperty.all(const Color(0xFFFDC27A)),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40)))),
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, '/menu_home'),
+                onPressed: () => Navigator.pushReplacement(
+                  context,
+                  PageTransition(
+                    child: const MenuHomeApp(),
+                    type: PageTransitionType.rightToLeftWithFade,
+                    duration: const Duration(milliseconds: 600),
+                    reverseDuration: const Duration(milliseconds: 600),
+                  ),
+                ),
                 child: Text(
                   "Login",
                   style: GoogleFonts.poppins(

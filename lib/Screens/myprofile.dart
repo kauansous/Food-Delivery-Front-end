@@ -308,13 +308,7 @@ class MyProfileApp extends StatelessWidget {
                           ),
                         ]
                       ),
-                      child: Column(
-                        children: [
-                          PaymentMethodApp("assets/image/MasterCard.png","Credit Card",1),
-                          PaymentMethodApp("assets/image/Paypal.png","Paypal",2),  
-                          PaymentMethodApp("assets/image/GooglePay.png","Google Pay",3),     
-                        ],
-                      ),
+                      child: const PaymentMethodApp(),
                     ),
                   ),
                   const SizedBox(

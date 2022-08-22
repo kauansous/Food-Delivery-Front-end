@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/Screens/login.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SignupApp extends StatelessWidget {
   const SignupApp({Key? key}) : super(key: key);
@@ -65,7 +67,13 @@ class SignupApp extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 12),
                         child: TextButton(
                           onPressed: () {
-                            Navigator.pushReplacementNamed(context, '/login');
+                            Navigator.pushReplacement(context, PageTransition(
+                              child: const LoginApp(), 
+                              type: PageTransitionType.rightToLeftWithFade,
+                              duration: const Duration(milliseconds: 600),
+                              reverseDuration: const Duration(milliseconds: 600),
+                              ),    
+                            );
                           },
                           child: Text(
                             "Login",

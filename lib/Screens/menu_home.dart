@@ -53,32 +53,34 @@ class _MenuHomeAppState extends State<MenuHomeApp> {
                 IconButton(
                     onPressed: () {
                       setState(() {
-                        opcaoselecionada = 0;                     
+                        opcaoselecionada = 0;
                       });
                     },
                     icon: const Icon(
                       Icons.home,
-                      color: Color(0xFFFDC27A),
                     )),
                 IconButton(
                     onPressed: () {
                       setState(() {
-                        opcaoselecionada = 1;                     
+                        opcaoselecionada = 1;
                       });
                     },
                     icon: const Icon(Icons.book)),
                 const SizedBox(width: 24),
-                IconButton(onPressed: () {
-                  setState(() {
-                    opcaoselecionada = 2;                     
-                  });
-                }, icon: const Icon(Icons.doorbell)),
                 IconButton(
-                onPressed: () {
-                  setState(() {
-                    opcaoselecionada = 3;                     
-                  });
-                }, icon: const Icon(Icons.account_box)),
+                    onPressed: () {
+                      setState(() {
+                        opcaoselecionada = 2;
+                      });
+                    },
+                    icon: const Icon(Icons.doorbell)),
+                IconButton(
+                    onPressed: () {
+                      setState(() {
+                        opcaoselecionada = 3;
+                      });
+                    },
+                    icon: const Icon(Icons.account_box)),
               ],
             ),
           ),
